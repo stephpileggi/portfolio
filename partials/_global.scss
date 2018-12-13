@@ -1,0 +1,111 @@
+$primaryColor: #f3f3f3;
+$accentColor: #FA7268;
+$fontColorDark: #1d1d1f;
+$fontColorLight: #DED8D7;
+
+@mixin primaryFont($size, $weight, $color) {
+    font-family: 'Raleway', sans-serif; 
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin secondaryFont {
+    font-family: 'Cabin', sans-serif;
+    color: $fontColor;
+    font-size: 2rem;
+    line-height: 32px;
+}
+
+@mixin globalBtn {
+    @include primaryFont(2rem, 29px);
+    background: $accentColor;
+    padding: 10px 33px;
+    display: inline-block;
+    &:hover {
+        background: #ee5d5d;
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    background: #fcfcfc;
+}
+
+ul, li {
+	padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+.visuallyhidden:not(:focus):not(:active) {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     margin: -1px;
+     border: 0;
+     padding: 0;
+     white-space: nowrap;
+     clip-path: inset(100%);
+     clip: rect(0 0 0 0);
+     overflow: hidden;
+}
+
+// typography styles
+
+h1, h2, h3, h4, h5, h6, p {
+	padding: 0;
+    margin: 0;
+}
+
+.section-heading {
+    text-align: center;
+    
+    h2 {
+        @include primaryFont(5rem, 900);
+        text-transform: uppercase;
+        margin: 50px 0 30px 0;    
+    }
+
+    h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        background-color: red;
+        color: red;
+        height: 1px;
+        width: 150px;
+        left: 50%;
+        margin-left: -75px;
+    }
+
+}
+
+// layout styles
+
+.wrapper {
+    max-width: 1300px;
+    margin: 0 auto;
+    width: 80%;
+}

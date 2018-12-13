@@ -1,0 +1,62 @@
+// header
+header {
+    background: url('assets/header-bg.png') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    -webkit-clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 89%, 0 0);
+    clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 89%, 0 0);
+
+    h1 {
+        @include primaryFont(4.5rem, 800);
+        max-width: 200px;
+        margin-top: 200px;
+        line-height: 1;
+    }
+
+    h1::after {
+        content: "";
+        border-top: 1px solid $fontColor;
+        display: block;
+        width: 30%;
+        margin-top: 10px;
+    }
+}
+
+.weight-change {
+    font-weight: 300;
+}
+
+// nav
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+
+    &__logo {
+        width: 30px;
+    }
+
+    &__top-nav {
+
+    }
+
+    &__top-nav-list {
+        display: flex;
+
+        li {
+            @include primaryFont(1.3rem, 700);
+            margin-left: 10px;
+            text-transform: uppercase;
+
+            a {
+                color: $fontColor;
+            }
+        }
+    }
+}
+
+.nav-wrap {  
+    border-bottom: 1px solid #efefef;
+    background: #fcfcfc;
+}

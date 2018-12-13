@@ -1,0 +1,36 @@
+// about
+
+.about-content {
+    display: flex;
+
+    &__text {
+        @include primaryFont(1.4rem, 400);
+        line-height: 1.61;
+        flex: 1 0 37.5%;
+
+        &-middle {
+            padding: 0 20px;
+        }
+    }
+
+    &__text-bold {
+        @include primaryFont(1.8rem, 900);
+        line-height: 1.4; 
+        text-align: right;
+        flex: 1 0 25%;
+    }
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.about-btn {
+    @include primaryFont(1.8rem, 900);
+    border: 2px solid $accentColor;
+    padding: 10px 40px;
+    border-radius: 4px; 
+}
+
