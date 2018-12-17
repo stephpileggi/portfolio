@@ -22,7 +22,7 @@
                 <ul class="nav-container__top-nav-list">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#works">Works</a></li>
+                    <li><a href="#works">Work</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -130,10 +130,10 @@
             <!-- skills section end  -->
 
             <!-- works section start -->
-            <section class="works fadeWork">
+            <section class="works fadeWork" id="works">
                 <div class="wrapper">
                     <div class="section-heading">
-                        <h2 id="works">Work</h2>
+                        <h2>Work</h2>
                     </div>
                     <div class="works-gallery">
                         <div class="column-one">
@@ -294,7 +294,7 @@ crossorigin="anonymous"></script>
                         // Only prevent default if animation is actually gonna happen
                         event.preventDefault();
                         $('html, body').animate({
-                            scrollTop: target.offset().top
+                            scrollTop: target.offset().top -80
                         }, 1000);
                     }
                 }
