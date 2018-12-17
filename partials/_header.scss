@@ -1,13 +1,15 @@
 // header
 header {
-    background: url('assets/header-bg.png') no-repeat center center;
+    background: url('assets/head.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
-    -webkit-clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 89%, 0 0);
-    clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 89%, 0 0);
+    -webkit-clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 88%, 0 0);
+    clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 88%, 0 0);
+    background-position: top -65px center;
+    background-attachment: fixed;
 
     h1 {
-        @include primaryFont(4.5rem, 800);
+        @include primaryFont(4.5rem, 800, $fontColorWhite);
         max-width: 200px;
         margin-top: 200px;
         line-height: 1;
@@ -15,7 +17,7 @@ header {
 
     h1::after {
         content: "";
-        border-top: 1px solid $fontColor;
+        border-top: 2px solid $accentColor;
         display: block;
         width: 30%;
         margin-top: 10px;
@@ -27,6 +29,12 @@ header {
 }
 
 // nav
+
+.nav-wrap {  
+    border-bottom: 1px solid #efefef;
+    background: #fcfcfc;
+}
+
 .nav-container {
     display: flex;
     align-items: center;
@@ -45,18 +53,23 @@ header {
         display: flex;
 
         li {
-            @include primaryFont(1.3rem, 700);
+            @include primaryFont(1.3rem, 700, $fontColorDark);
             margin-left: 10px;
             text-transform: uppercase;
 
             a {
-                color: $fontColor;
+                color: $fontColorDark;
+            }
+
+            a:hover {
+                color: $accentColor;
             }
         }
     }
 }
 
-.nav-wrap {  
-    border-bottom: 1px solid #efefef;
-    background: #fcfcfc;
+.typing {
+  @include primaryFont(1.7rem, 700, $fontColorWhite);  
+  padding-top: 10px;
+  display: inline-block;
 }

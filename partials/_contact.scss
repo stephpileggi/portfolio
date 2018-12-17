@@ -1,0 +1,82 @@
+footer {
+    background: url('assets/feet.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    -webkit-clip-path: polygon(36% 0, 100% 10%, 100% 100%, 0 100%, 0 10%);
+    clip-path: polygon(36% 0, 100% 10%, 100% 100%, 0 100%, 0 10%);
+    background-attachment: fixed;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.contact-heading {
+    h2, p {
+        color: $fontColorWhite;
+        position: relative;
+    } 
+
+    h2 {
+        margin-bottom: 100px;
+    }
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    :first-child {
+            border-left: none;
+        }
+
+    &__container {
+        flex: 0 1 25%;
+        border-left: solid 2px $accentColor;
+        padding: 0 30px;
+
+        h2 {
+            @include primaryFont(2rem, 800, $fontColorWhite);
+            text-transform: uppercase;
+            padding-bottom: 10px;
+        }
+
+        p {
+            @include primaryFont(2rem, 400, $fontColorWhite);
+        }
+    }
+}
+
+.contact-icon {
+    color: $accentColor;
+    font-size: 3rem;
+    padding-bottom: 15px;
+}
+
+.social-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+
+    h2 {
+        @include primaryFont(2rem, 800, $fontColorWhite);
+        text-transform: uppercase;
+        padding: 60px 0 10px 0;
+    }
+}
+
+.social-icon {
+    color: $fontColorWhite;
+    font-size: 3rem; 
+    padding: 0 5px; 
+}
+
+.social-icon:hover {
+    color: $accentColor;  
+}
+

@@ -1,17 +1,19 @@
 $primaryColor: #f3f3f3;
 $accentColor: #FA7268;
 $fontColorDark: #1d1d1f;
-$fontColorLight: #DED8D7;
+$fontColorLight: #ACABAB;
+$fontColorWhite: #fcfcfc;
 
 @mixin primaryFont($size, $weight, $color) {
     font-family: 'Raleway', sans-serif; 
     font-size: $size;
     font-weight: $weight;
+    color: $color;
 }
 
 @mixin secondaryFont {
     font-family: 'Cabin', sans-serif;
-    color: $fontColor;
+    color: $fontColorDark;
     font-size: 2rem;
     line-height: 32px;
 }
@@ -83,21 +85,20 @@ h1, h2, h3, h4, h5, h6, p {
     text-align: center;
     
     h2 {
-        @include primaryFont(5rem, 900);
+        @include primaryFont(5rem, 900, $fontColorDark);
         text-transform: uppercase;
-        margin: 50px 0 30px 0;    
+        margin-bottom: 70px;   
+        position: relative; 
     }
 
     h2::after {
         content: "";
         position: absolute;
-        bottom: -10px;
-        background-color: red;
-        color: red;
-        height: 1px;
-        width: 150px;
-        left: 50%;
-        margin-left: -75px;
+        bottom: -6px;
+        background-color: $accentColor;
+        height: 2px;
+        width: 100px;
+        right: 50%;
     }
 
 }
@@ -105,7 +106,35 @@ h1, h2, h3, h4, h5, h6, p {
 // layout styles
 
 .wrapper {
-    max-width: 1300px;
+    max-width: 1000px;
     margin: 0 auto;
     width: 80%;
 }
+
+.fade {
+    opacity: 0;  
+    transition: all 700ms ease-in;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
+//buttons
+
+.global-btn {
+    @include primaryFont(1.8rem, 900, $fontColorDark);
+    border: 2px solid $accentColor;
+    padding: 10px 40px;
+    border-radius: 4px; 
+}
+
+.global-btn:hover {
+    @include primaryFont(1.8rem, 900,#fcfcfc);
+    border: 2px solid $accentColor;
+    background: $accentColor; 
+    color: #fcfcfc;
+}
+
+
+

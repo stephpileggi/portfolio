@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Raleway:300,400,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
         crossorigin="anonymous">
-        <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Stephanie Pileggi</title>
 </head>
 <body>
@@ -18,16 +19,17 @@
                 <div class="nav-container__logo"><img src="assets/logo.svg" alt="logo"></div>
                 <nav class="nav-container__top-nav">
                     <ul class="nav-container__top-nav-list">
-                        <li><a href="">About</a></li>
-                        <li><a href="">Skills</a></li>
-                        <li><a href="">Works</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>  
         </div>
         <div class="heading-wrap wrapper">
             <h1><span class="weight-change">Stephanie</span> Pileggi</h1>
+            <h2 class="typing"></h2>
         </div>    
     </header>
 <!-- header section end -->
@@ -36,131 +38,294 @@
     <main id="maincontent">
         <div class="wrapper">
             <!-- about section start -->
-            <section class="about">
+            <section id="about" class="about fade">
                 <div class="section-heading">
                     <h2>About me</h2>
                 </div>
                 <div class="about-content">
-                    <p class="about-content__text-bold">Hello, I'm Stephanie, Front-End Web Developer and Photographer based in Toronto, Canada. I focus on building beautiful, clean, responsive web pages.</p>
+                    <p class="about-content__text-bold quote">Hello, I'm Stephanie, Front-End Web Developer and Photographer based in Toronto, Canada. I focus on building beautiful, clean, responsive web pages.</p>
                     <p class="about-content__text about-content__text-middle ">Prior to completing the accelerated Web Development program and Web Development Immersive (Bootcamp) at HackerYou, I worked as a Dental Assistant for 10 years, where I was able to work closely on a team to deliver exceptional patient care. I love problem solving and keeping up to date with the latest design trends and am always looking for exciting new opportunities to learn and grow my skill set. My attention to detail and eye for design make a great combination in what I do.</p>
-                    <p class="about-content__text">Dabbling in photography, I specialize in animal and street photography. My two main subjects of attention are Olive and Tofu, my 7 and 3 year old French Bulldogs! We are all happiest in the sunshine at one of the off-leash dog parks or beach here in Toronto. When not behind the computer screen or lens, you can find me honing my skills on one of the many outdoor rinks playing hockey or in one of my favorite ping pong social clubs, SPiN, destroying the competition.</p>
+                    <p class="about-content__text bulldog">Dabbling in photography, I specialize in animal and street photography. My two main subjects of attention are Olive and Tofu, my 7 and 3 year old French Bulldogs! We are all happiest in the sunshine at one of the off-leash dog parks or beach here in Toronto. When not behind the computer screen or lens, you can find me honing my skills on one of the many outdoor rinks playing hockey or in one of my favorite ping pong social clubs, SPiN, destroying the competition.</p>
                 </div>
                 <div class="btn-container">
-                    <a class="about-btn" href="#">Checkout my skills</a>
+                    <a class="global-btn" href="#skills">Checkout my skills</a>
                 </div>  
             </section>
+        </div>
             <!-- about section end -->
 
             <!-- skills section start -->
-            <section class="skills">
-                <div class="section-heading">
-                    <h2>Skills</h2>
+            <section id="skills" class="skills fade">
+                <div class="wrapper skills-container">
+                    <div class="section-heading">
+                        <h2>Skills</h2>
+                    </div>
+
+                    <div class="skills-items">
+                        <div class="skills-item">
+                            <img src="assets/html-icon.svg" alt="Html5 icon.">
+                            <div class="skills-description">
+                                <h2>Html5</h2>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="assets/css-icon.svg" alt="Css icon.">
+                            <div class="skills-description">
+                                <h2>Css3</h2>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="assets/javascript-icon.svg" alt="JavaScript icon.">
+                            <div class="skills-description">
+                                <h2>Javascript</h2>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="assets/react-icon.svg" alt="React icon.">
+                            <div class="skills-description">
+                                <h2>React</h2>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="assets/sass-icon.svg" alt="Sass icon.">
+                            <div class="skills-description">
+                                <h2>Sass</h2>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="assets/sketch-icon.svg" alt="Sketch icon.">
+                            <div class="skills-description">
+                                <h2>Sketch</h2>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="assets/adobe-icon.svg" alt="Adobe icon.">
+                            <div class="skills-description">
+                                <h2>Adobe</h2>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="assets/wordpress-icon.svg" alt="Wordpress icon.">
+                            <div class="skills-description">
+                                <h2>Wordpress</h2>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="assets/bootstrap-icon.svg" alt="Bootstrap icon.">
+                            <div class="skills-description">
+                                <h2>Bootstrap</h2>
+                            </div>
+                        </div>
+                        <div class="skills-item">
+                            <img src="assets/github-icon.svg" alt="Github icon.">
+                            <div class="skills-description">
+                                <h2>Git</h2>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
-                <ul>
-                    <li><i class="fab fa-html5"></i></li>
-                    <li><i class="fab fa-css3-alt"></i></li>
-                    <li><i class="fab fa-sketch"></i></li>
-                    <li><i class="fab fa-github"></i></li>
-                    <li><i class="fab fa-sass"></i></li>
-                    <li><i class="fab fa-adobe"></i></li>
-                    <li><i class="fab fa-react"></i></li>
-                    <li><i class="fab fa-js"></i></li>
-                    <li><i class="fab fa-wordpress"></i></li>
-                    <li><i class="fas fa-code-branch"></i></li>
-                </ul>
-            </section>
+            </section>  
             <!-- skills section end  -->
 
             <!-- works section start -->
-            <section class="works">
-                <div class="section-heading">
-                    <h2>Works</h2>
-                </div>
-                
-                <div class="works-container">
-                    <p>Conversation starter app</p>
-                    <h2>Dad Talk</h2>
-                    <img src="assets/dad-talk-app.png" alt="Dad talk starter convo app">
-                    <div class="hover-content">
-                        <h2>Dad Talk</h2>
-                        <p>React | sass | firebase | google authentication</p>
-                        <p>Created to help start conversations with awkward dads everywhere. An app that lets users submit ideas of things to talk to dads about, filtered by dads mood and store the topics on firebase.</p>
+            <section class="works fade">
+                <div class="wrapper">
+                    <div class="section-heading">
+                        <h2 id="works">Work</h2>
                     </div>
-                </div>
-
-                <div class="works-container">
-                    <p>Psd conversion</p>
-                    <h2>Harper</h2>
-                    <img src="assets/harper.png" alt="Harper website">
-                    <div class="hover-content">
-                        <h2>Harper</h2>
-                        <p>Html5 | css3 | sass</p>
-                        <p>PSD conversion into a pixel perfect, fully responsive website</p>
+                    <div class="works-gallery">
+                        <div class="column-one">
+                            <div class="works-container">
+                                <div class="hover-content-parent">
+                                    <img class="works-img works-img-one" src="assets/comp-one.png" alt="Bad movie generator app">
+                                    <div class="hover-content">
+                                        <h2>Dad Talk</h2>
+                                        <h3>React | sass | firebase | google authentication</h3>
+                                        <p>Created to help start conversations with awkward dads everywhere. An     app that lets users submit
+                                            ideas of
+                                            things to talk to dads about, filtered by dads mood and store the topics on firebase.
+                                        </p>
+                                        <div class="site-links">
+                                            <a href="#"><img src="assets/link.svg" alt="link to live page"></a>
+                                            <a href="https://github.com/stephpileggi/project6_Steph_Jason_Urszula"><img src="assets/github-link.svg" alt="link to github page"></a>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="works-container">
+                                <div class="hover-content-parent">
+                                    <img class="works-img works-img-two" src="assets/comp-three.png" alt="Click bait lure selector app">
+                                    <div class="hover-content">
+                                        <h2>Two thumbs down</h2>
+                                        <h3>Javascript | html5 | css3 | sass | movie database api</h3>
+                                        <p>A javascript app that allows user to generate the worst rated movie       based on the user input of an
+                                            actor.
+                                            Powered by the Movie DB API.
+                                        </p>
+                                        <div class="site-links">
+                                            <a href="#"><img src="assets/link.svg" alt="link to live page"></a>
+                                            <a href="https://github.com/stephpileggi/Project4_Tim_Steph"><img src="assets/github-link.svg" alt="link to github page"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="column-two">
+                            <div class="works-container">
+                                <div class="hover-content-parent">
+                                    <a href="#"><img class="works-img works-img-three" src="assets/comp-two.png" alt="Dad talk starter convo app"></a>
+                                    <div class="hover-content">
+                                        <h2>Harper</h2>
+                                        <h3>Html5 | css3 | sass</h3>
+                                        <p>PSD conversion into a pixel perfect, fully responsive website</p>
+                                        <div class="site-links">
+                                            <a href="#"><img src="assets/link.svg" alt="link to live page"></a>
+                                            <a href="https://github.com/stephpileggi/steph_pileggi_project2"><img src="assets/github-link.svg" alt="link to github page"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="works-container">
+                                <div class="hover-content-parent">
+                                    <a href=""><img class="works-img works-img-four" src="assets/comp-four.png" alt="Harper website"></a>
+                                    <div class="hover-content">
+                                        <h2>Click bait</h2>
+                                        <h3>Javascript | jquery | html5 | css3</h3>
+                                        <p>A fishing questionnaire built with JavaScript and jquery that helps       users find the best lure to use
+                                            based on
+                                            their specific surroundings.
+                                        </p>
+                                        <div class="site-links">
+                                            <a href="#"><img src="assets/link.svg" alt="link to live page"></a>
+                                            <a href="https://github.com/stephpileggi/steph_pileggi_project3"><img src="assets/github-link.svg" alt="link to github page"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="btn-container">
+                        <a class="global-btn" href="#contact">Contact Me</a>
                     </div>
-                </div>
-
-                <div class="works-container">
-                    <p>Bad movie generator app</p>
-                    <h2>Two thumbs down</h2>
-                    <img src="assets/movie-app.png" alt="Bad movie generator app">
-                    <div class="hover-content">
-                        <h2>Two thumbs down</h2>
-                        <p>Javascript | html5 | css3 | sass | movie database api</p>
-                        <p>A javascript app that allows user to generate the worst rated movie based on the user input of an actor. Powered by the Movie DB API.</p>
-                    </div>
-                </div>
-
-                <div class="works-container">
-                    <p>Lure selector app</p>
-                    <h2>Click bait</h2>
-                    <img src="assets/clickbait.png" alt="Click bait lure selector app">
-                    <div class="hover-content">
-                        <h2>Click bait</h2>
-                        <p>Javascript | jquery | html5 | css3</p>
-                        <p>A fishing questionnaire built with JavaScript and jquery that helps users find the best lure to use based on their specific surroundings.</p>
-                    </div>
-                </div>
-                <a href="">Contact Me</a>
+                </div>   
             </section>
             <!-- works section end -->
-        </div> 
+        
     </main>
 <!-- main section end -->
 
 <!-- footer section start -->
     <footer>
         <div class="wrapper">
-            <section class="contact">
-                <div class="section-heading">
+            <section id="contact" class="contact">
+                <div class="section-heading contact-heading">
                     <h2>Contact</h2>
-                    <p>Say hello!</p>
                 </div>
-                <div>
-                    <i class="fas fa-mobile-alt"></i>
-                    <h2>Phone</h2>
-                    <p>(647)204-7258</p>
-                </div>
-                <div>
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h2>Address</h2>
-                    <p>Toronto, ON</p>
-                </div>
-                <div>
-                    <i class="far fa-envelope"></i>
-                    <h2>Email</h2>
-                    <p>stephpileggi@gmail.com</p>
+                <div class="contact-info">
+                    <div class="contact-info__container">
+                        <i class="contact-icon fas fa-mobile-alt"></i>
+                        <h2>Phone</h2>
+                        <a href="tel:(647)204-7258"><p>(647)204-7258</p></a>
+                    </div>
+                    <div class="contact-info__container">
+                        <i class="contact-icon fas fa-map-marker-alt"></i>
+                        <h2>Address</h2>
+                        <p>Toronto, ON</p>
+                    </div>
+                    <div class="contact-info__container">
+                        <i class="contact-icon far fa-envelope"></i>
+                        <h2>Email</h2>
+                        <a href="stephpileggi@gmail.com"><p>stephpileggi@gmail.com</p></a>
+                    </div>
                 </div>
                 <div class="social-container">
                     <h2>Follow me!</h2>
-                    <a href="https://twitter.com/StephaniePileg1?lang=en"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/in/stephanie-pileggi-7b68b4132/"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/stephpileggi"><i class="fab fa-github-alt"></i></a>
+                    <div class="social-contact">
+                        <a href="https://twitter.com/StephaniePileg1?lang=en"><i class="social-icon fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/stephanie-pileggi-7b68b4132/"><i class="social-icon fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/stephpileggi"><i class="social-icon fab fa-github-alt"></i></a>
+                    </div>   
                 </div>
-
             </section>
         </div>
     </footer>
 <!-- footer section end -->
+
+<!-- JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+<script src="jquery.waypoints.min.js"></script>
+<script src="typed.min.js"></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+<script>
+     $('.main-carousel').flickity({
+            // options
+            groupCells: 1,
+            autoPlay: 1500,
+            pageDots: false,
+            cellAlign: 'center',
+            contain: true,
+            pauseAutoPlayOnHover: false
+        });
+
+        var typed = new Typed('.typing', {
+                strings: ["Web-Developer", "Web Designer", "Photographer", "Dog Lover"],
+                typeSpeed: 45,
+                backSpeed: 45,
+                backDelay: 1000,
+                loop: true
+        });
+
+      // Select all links with hashes
+        $('a[href*="#"]')
+            // Remove links that don't actually link to anything
+            .not('[href="#"]')
+            .not('[href="#0"]')
+            .click(function (event) {
+                // On-page links
+                if (
+                    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                    &&
+                    location.hostname == this.hostname
+                ) {
+                    // Figure out element to scroll to
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    // Does a scroll target exist?
+                    if (target.length) {
+                        // Only prevent default if animation is actually gonna happen
+                        event.preventDefault();
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000, function () {
+                            // Callback after animation
+                            // Must change focus!
+                            var $target = $(target);
+                            $target.focus();
+                            if ($target.is(":focus")) { // Checking if the target was focused
+                                return false;
+                            } else {
+                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+                                $target.focus(); // Set focus again
+                            };
+                        });
+                    }
+                }
+            });
+
+            // fade in on scroll
+            let $fade = $('.fade');
+            $fade.waypoint(function() {
+                $fade.addClass('fadeIn');
+            }, {offset:'50%'});
+                    
+</script>
+   
+
     
 </body>
 </html>

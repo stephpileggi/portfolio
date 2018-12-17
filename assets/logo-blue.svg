@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="57px" height="57px" viewBox="0 0 57 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-145.000000, -86.000000)">
+            <g id="logo" transform="translate(145.000000, 86.000000)">
+                <circle id="Oval-2" fill="#01B1B0" cx="28.5" cy="28.5" r="28.5"></circle>
+                <text id="sp" font-family="KaushanScript-Regular, Kaushan Script" font-size="30" font-weight="normal" letter-spacing="1.9" fill="#FFFFFF">
+                    <tspan x="14" y="33">sp</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

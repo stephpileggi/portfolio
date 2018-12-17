@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>css</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tablet-Portrait" transform="translate(-353.000000, -10.000000)">
+            <g id="css" transform="translate(353.000000, 10.000000)">
+                <circle id="Oval-2" fill="#FCFCFC" cx="50" cy="50" r="50"></circle>
+                <g transform="translate(20.000000, 16.000000)" fill="#FA7268" fill-rule="nonzero" id="Shape">
+                    <path d="M0,0 L5.55535714,62.1 L30.5,69 L55.4359286,62.1043125 L61,0 L0,0 Z M49.1224286,20.3075625 L48.4209286,28.108875 L46.3077143,51.499875 L30.5,55.821 L30.4912857,55.8253125 L14.6966429,51.4955625 L13.5899286,39.2653125 L21.3282143,39.2653125 L21.9033571,45.6133125 L30.4912857,47.9075625 L30.5,47.8989375 L39.0966429,45.6046875 L40.2687143,35.03475 L13.2195714,35.1080625 L12.4527143,27.876 L40.9179286,27.54825 L41.4930714,19.8073125 L11.6902143,19.88925 L11.1891429,12.696 L30.5,12.696 L49.8108571,12.696 L49.1224286,20.3075625 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
