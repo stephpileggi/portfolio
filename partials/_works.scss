@@ -4,6 +4,15 @@
     padding: 100px 0;
 }
 
+.fadeWork {
+    opacity: 0;  
+    transition: all 800ms ease-in;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
 .works-gallery {
     display: flex;
 }

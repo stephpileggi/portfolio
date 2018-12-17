@@ -10,6 +10,15 @@
     background-attachment: fixed;
 }
 
+.fadeSkills {
+    opacity: 0;  
+    transition: all 800ms ease-in;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
 .skills-container {
     display: flex;
     flex-direction: column; 

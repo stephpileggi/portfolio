@@ -7,6 +7,7 @@ header {
     clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 88%, 0 0);
     background-position: top -65px center;
     background-attachment: fixed;
+    padding: 1px;
 
     h1 {
         @include primaryFont(4.5rem, 800, $fontColorWhite);
@@ -67,6 +68,18 @@ header {
         }
     }
 }
+
+.nav-wrap.scrolled {
+    background-color: $fontColorWhite;
+    box-shadow: 1px 1px 10px $fontColorLight;
+    transition: background-color 200ms linear;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
 
 .typing {
   @include primaryFont(1.7rem, 700, $fontColorWhite);  

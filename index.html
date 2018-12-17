@@ -12,21 +12,23 @@
     <title>Stephanie Pileggi</title>
 </head>
 <body>
+<!-- Allows users the ability to get to the main content for your site -->
+    <a href="#maincontent" class="skip-link">Skip to main content.</a>
 <!-- header section start -->
+    <div class="nav-wrap">
+        <div class="wrapper nav-container">
+            <div class="nav-container__logo"><img src="assets/logo.svg" alt="logo"></div>
+            <nav class="nav-container__top-nav">
+                <ul class="nav-container__top-nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>  
+    </div>
     <header>
-        <div class="nav-wrap">
-            <div class="wrapper nav-container">
-                <div class="nav-container__logo"><img src="assets/logo.svg" alt="logo"></div>
-                <nav class="nav-container__top-nav">
-                    <ul class="nav-container__top-nav-list">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#works">Works</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>  
-        </div>
         <div class="heading-wrap wrapper">
             <h1><span class="weight-change">Stephanie</span> Pileggi</h1>
             <h2 class="typing"></h2>
@@ -38,7 +40,7 @@
     <main id="maincontent">
         <div class="wrapper">
             <!-- about section start -->
-            <section id="about" class="about fade">
+            <section id="about" class="about fadeAbout">
                 <div class="section-heading">
                     <h2>About me</h2>
                 </div>
@@ -55,8 +57,8 @@
             <!-- about section end -->
 
             <!-- skills section start -->
-            <section id="skills" class="skills fade">
-                <div class="wrapper skills-container">
+            <section id="skills" class="skills">
+                <div class="wrapper skills-container fadeSkills">
                     <div class="section-heading">
                         <h2>Skills</h2>
                     </div>
@@ -128,7 +130,7 @@
             <!-- skills section end  -->
 
             <!-- works section start -->
-            <section class="works fade">
+            <section class="works fadeWork">
                 <div class="wrapper">
                     <div class="section-heading">
                         <h2 id="works">Work</h2>
@@ -220,7 +222,7 @@
 <!-- footer section start -->
     <footer>
         <div class="wrapper">
-            <section id="contact" class="contact">
+            <section id="contact" class="contact fadeContact">
                 <div class="section-heading contact-heading">
                     <h2>Contact</h2>
                 </div>
@@ -262,24 +264,16 @@ crossorigin="anonymous"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 <script>
-     $('.main-carousel').flickity({
-            // options
-            groupCells: 1,
-            autoPlay: 1500,
-            pageDots: false,
-            cellAlign: 'center',
-            contain: true,
-            pauseAutoPlayOnHover: false
-        });
-
+      //typewriter script
         var typed = new Typed('.typing', {
-                strings: ["Web-Developer", "Web Designer", "Photographer", "Dog Lover"],
+                strings: ["Web Developer", "Web Designer", "Photographer", "Dog Lover"],
                 typeSpeed: 45,
                 backSpeed: 45,
                 backDelay: 1000,
                 loop: true
         });
 
+      //smooth scroll  
       // Select all links with hashes
         $('a[href*="#"]')
             // Remove links that don't actually link to anything
@@ -301,31 +295,42 @@ crossorigin="anonymous"></script>
                         event.preventDefault();
                         $('html, body').animate({
                             scrollTop: target.offset().top
-                        }, 1000, function () {
-                            // Callback after animation
-                            // Must change focus!
-                            var $target = $(target);
-                            $target.focus();
-                            if ($target.is(":focus")) { // Checking if the target was focused
-                                return false;
-                            } else {
-                                $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-                                $target.focus(); // Set focus again
-                            };
-                        });
+                        }, 1000);
                     }
                 }
             });
 
             // fade in on scroll
-            let $fade = $('.fade');
-            $fade.waypoint(function() {
-                $fade.addClass('fadeIn');
-            }, {offset:'50%'});
+            let $fadeAbout = $('.fadeAbout');
+            $fadeAbout.waypoint(function() {
+                $fadeAbout.addClass('fadeIn');
+            }, {offset:'70%'});
+
+            let $fadeSkills = $('.fadeSkills');
+                $fadeSkills.waypoint(function () {
+                    $fadeSkills.addClass('fadeIn');
+                }, { offset: '60%' });
+
+            let $fadeWork = $('.fadeWork');
+                $fadeWork.waypoint(function () {
+                    $fadeWork.addClass('fadeIn');
+                }, { offset: '40%' });
+
+            let $fadeContact = $('.fadeContact');
+                $fadeContact.waypoint(function () {
+                    $fadeContact.addClass('fadeIn');
+                }, { offset: '80%' });
+
+            //sticky nav
+            $(function () {
+                $(document).scroll(function () {
+                    let $nav = $(".nav-wrap");
+                    console.log($(this).scrollTop(), $nav.height())
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                });
+            });   
                     
 </script>
    
-
-    
 </body>
 </html>

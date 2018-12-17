@@ -14,6 +14,15 @@ footer {
     height: 100vh;
 }
 
+.fadeContact {
+    opacity: 0;  
+    transition: all 800ms ease-in;
+}
+
+.fadeIn {
+    opacity: 1;
+}
+
 .contact-heading {
     h2, p {
         color: $fontColorWhite;
