@@ -218,30 +218,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
-.section-heading {
-  text-align: center;
-}
-
-.section-heading h2 {
-  font-family: 'Raleway', sans-serif;
-  font-size: 5rem;
-  font-weight: 900;
-  color: #1d1d1f;
-  text-transform: uppercase;
-  margin-bottom: 70px;
-  position: relative;
-}
-
-.section-heading h2::after {
-  content: "";
-  position: absolute;
-  bottom: -6px;
-  background-color: #FA7268;
-  height: 2px;
-  width: 100px;
-  right: 50%;
-}
-
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
@@ -271,7 +247,7 @@ h1, h2, h3, h4, h5, h6, p {
 header {
   background: url("assets/head.jpg") no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  height: calc(100vh - 80px);
   -webkit-clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 88%, 0 0);
   clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 88%, 0 0);
   background-position: top -65px center;
@@ -368,6 +344,22 @@ header h1::after {
   display: inline-block;
 }
 
+@media (max-width: 861px) {
+  header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #1d1d1f;
+    margin-top: 250px;
+  }
+  .typing {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #1d1d1f;
+  }
+}
+
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,6 +382,30 @@ header h1::after {
 
 .fadeIn {
   opacity: 1;
+}
+
+.about-section-heading {
+  text-align: center;
+}
+
+.about-section-heading h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #1d1d1f;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.about-section-heading h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  background-color: #FA7268;
+  height: 2px;
+  width: 100px;
+  right: 50%;
 }
 
 .about-content {
@@ -416,13 +432,19 @@ header h1::after {
 .about-content__text-bold {
   font-family: 'Raleway', sans-serif;
   font-size: 1.8rem;
-  font-weight: 900;
+  font-weight: 800;
   color: #1d1d1f;
   line-height: 1.4;
   text-align: right;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 25%;
           flex: 1 0 25%;
+}
+
+.about-text-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .quote {
@@ -447,6 +469,32 @@ header h1::after {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 30px;
+}
+
+@media (max-width: 800px) {
+  .about-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .about-content__text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+  .about-content__text-middle {
+    padding: 20px 0;
+  }
+  .about-content__text-bold {
+    text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
 }
 
 .skills {
@@ -476,6 +524,30 @@ header h1::after {
 
 .fadeIn {
   opacity: 1;
+}
+
+.skills-section-heading {
+  text-align: center;
+}
+
+.skills-section-heading h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #1d1d1f;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.skills-section-heading h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  background-color: #FA7268;
+  height: 2px;
+  width: 80px;
+  right: 48%;
 }
 
 .skills-container {
@@ -508,6 +580,12 @@ header h1::after {
 }
 
 .skills-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20%;
           flex: 1 1 20%;
@@ -515,6 +593,11 @@ header h1::after {
   transition: all 0.6s ease-in-out;
   position: relative;
   margin: 20px 0;
+}
+
+.skills-item img {
+  position: relative;
+  left: 0;
 }
 
 .skills-description {
@@ -532,8 +615,6 @@ header h1::after {
   width: 100px;
   height: 100px;
   position: absolute;
-  top: 0;
-  left: 0;
   z-index: -10;
 }
 
@@ -545,9 +626,9 @@ header h1::after {
 }
 
 .skills-item:hover img:first-child {
-  margin-left: 90px;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
+  left: 90px;
 }
 
 .skills-item img:first-child {
@@ -568,6 +649,30 @@ header h1::after {
 
 .fadeIn {
   opacity: 1;
+}
+
+.work-section-heading {
+  text-align: center;
+}
+
+.work-section-heading h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #1d1d1f;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.work-section-heading h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  background-color: #FA7268;
+  height: 2px;
+  width: 70px;
+  right: 48%;
 }
 
 .works-gallery {
@@ -614,7 +719,7 @@ header h1::after {
   font-weight: 700;
   color: #fcfcfc;
   text-transform: uppercase;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   -webkit-transition: all .8s ease-out;
   transition: all .8s ease-out;
 }
@@ -624,7 +729,7 @@ header h1::after {
   font-size: 2.3rem;
   font-weight: 700;
   color: #fcfcfc;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   text-transform: capitalize;
   -webkit-transition: all .8s ease-out;
   transition: all .8s ease-out;
@@ -633,7 +738,7 @@ header h1::after {
 .hover-content p {
   font-family: 'Raleway', sans-serif;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #fcfcfc;
   padding-bottom: 10px;
   line-height: 1.4;
@@ -742,6 +847,30 @@ footer {
 
 .fadeIn {
   opacity: 1;
+}
+
+.contact-section-heading {
+  text-align: center;
+}
+
+.contact-section-heading h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: #1d1d1f;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.contact-section-heading h2::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  background-color: #FA7268;
+  height: 2px;
+  width: 100px;
+  right: 49%;
 }
 
 .contact-heading h2, .contact-heading p {

@@ -2,7 +2,7 @@
 header {
     background: url('assets/head.jpg') no-repeat center center;
     background-size: cover;
-    height: 100vh;
+    height: calc(100vh - 80px);
     -webkit-clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 88%, 0 0);
     clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 88%, 0 0);
     background-position: top -65px center;
@@ -80,9 +80,24 @@ header {
     z-index: 100;
 }
 
-
+//typewriter
 .typing {
   @include primaryFont(1.7rem, 700, $fontColorWhite);  
   padding-top: 10px;
   display: inline-block;
 }
+
+//media queries
+
+@media(max-width: 861px) {
+    header {
+        h1 {
+            @include primaryFont(4.5rem, 800, $fontColorDark);
+            margin-top: 250px;  
+        }
+    }
+    .typing {
+        @include primaryFont(1.7rem, 700, $fontColorDark);  
+    }
+}
+

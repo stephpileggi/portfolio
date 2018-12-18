@@ -23,6 +23,27 @@ footer {
     opacity: 1;
 }
 
+.contact-section-heading {
+    text-align: center;
+    
+    h2 {
+        @include primaryFont(5rem, 900, $fontColorDark);
+        text-transform: uppercase;
+        margin-bottom: 70px;   
+        position: relative; 
+    }
+
+    h2::after {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        background-color: $accentColor;
+        height: 2px;
+        width: 100px;
+        right: 49%;
+    }
+}
+
 .contact-heading {
     h2, p {
         color: $fontColorWhite;
