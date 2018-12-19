@@ -2,11 +2,14 @@
 header {
     background: url('assets/head.jpg') no-repeat center center;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     height: calc(100vh - 80px);
     -webkit-clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 88%, 0 0);
     clip-path: polygon(100% 0, 100% 88%, 62% 100%, 0 88%, 0 0);
-    background-position: top -65px center;
     background-attachment: fixed;
+    //adding 1px padding because of the large margin with the h1
     padding: 1px;
 
     h1 {
@@ -96,8 +99,21 @@ header {
             margin-top: 250px;  
         }
     }
+    
     .typing {
         @include primaryFont(1.7rem, 700, $fontColorDark);  
     }
+
+    .weight-change {
+        color: $accentColor;
+    }
 }
+
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+
+    header { 
+        background-attachment: initial; 
+    }
+}}
 

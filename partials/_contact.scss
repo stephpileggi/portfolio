@@ -1,6 +1,9 @@
 footer {
     background: url('assets/feet.jpg') no-repeat center center;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     height: 100vh;
     -webkit-clip-path: polygon(36% 0, 100% 10%, 100% 100%, 0 100%, 0 10%);
     clip-path: polygon(36% 0, 100% 10%, 100% 100%, 0 100%, 0 10%);
@@ -108,5 +111,54 @@ footer {
 
 .social-icon:hover {
     color: $accentColor;  
+}
+
+@media (max-width: 743px) {
+    .contact-info__container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .contact-address {
+        display: none;
+    }
+
+    .social-container {
+        padding-top: 30px;
+
+        h2 {
+            padding: 30px 0 10px 0;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-section-heading {
+        
+        h2 {
+            margin-bottom: 50px;   
+        }
+    }
+    .contact-info {
+        flex-direction: column;
+
+        &__container {
+            border-left: none;
+            padding: 10px;
+
+            h2 {
+                padding-bottom: 0px;
+            }
+        }
+    }
+
+    .social-container  {
+
+            h2 {
+            @include primaryFont(2rem, 800, $accentColor);
+            text-transform: uppercase;
+            padding: 10px 0 10px 0;
+        }
+    }
 }
 

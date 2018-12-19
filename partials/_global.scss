@@ -1,7 +1,7 @@
 $primaryColor: #f3f3f3;
 $accentColor: #FA7268;
 $fontColorDark: #1d1d1f;
-$fontColorLight: #ACABAB;
+$fontColorLight: #7F7E7E;
 $fontColorWhite: #fcfcfc;
 
 @mixin primaryFont($size, $weight, $color) {
@@ -87,6 +87,14 @@ h1, h2, h3, h4, h5, h6, p {
     max-width: 1000px;
     margin: 0 auto;
     width: 80%;
+}
+
+@media(max-width: 450px) {
+    .wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        width: 90%;
+    } 
 }
 
 //buttons

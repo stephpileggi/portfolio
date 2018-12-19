@@ -1,6 +1,9 @@
 .skills {
     background: url('assets/torso.jpg') no-repeat center center;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     -webkit-clip-path: polygon(35% 0, 100% 15%, 100% 91%, 62% 100%, 0 90%, 0 15%);
     clip-path: polygon(35% 0, 100% 15%, 100% 91%, 62% 100%, 0 90%, 0 15%);
     display: flex;
@@ -95,4 +98,51 @@
 
 .skills-item img:first-child {
       transition: 1s;
+}
+
+//media queries 
+
+@media(max-width: 1190px) {
+
+    .skills-item:hover img:first-child {
+      transform: rotate(0deg);
+      left: 0;
+      top: 0;
+      opacity: 0;
+      transition: 700ms;
+    }  
+}
+
+@media(max-width: 764px) {
+    .skills-items img {
+        width: 75px;
+        height: 75px;
+    } 
+    
+    .skills-description {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media(max-width: 525px) {
+    .skills-item {
+        flex: 1 1 20%;
+    }
+
+    .skills-items img {
+        width: 60px;
+        height: 60px;
+    } 
+    
+    .skills-description {
+        width: 60px;
+        height: 60px;
+    }
+
+    .skills-description {
+        h2 {
+            @include primaryFont(1.1rem, 600, $fontColorWhite);    
+        }
+    }
 }
